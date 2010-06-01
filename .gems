@@ -1,5 +1,6 @@
-rails -v=2.3.4
+rails -v=2.3.6
 
+open-uri
 addressable
 nokogiri --version 1.4.0
 
