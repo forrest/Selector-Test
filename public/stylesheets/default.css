@@ -1,0 +1,5 @@
+body {background-color:#eee; position:relative;}
+
+#header {padding:10px;}
+
+iframe { border-style:solid; border-color:#666; border-width:1px 0 0 0; position:absolute; top:50px; bottom:0px; left:0px; right:0px;}

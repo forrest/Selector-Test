@@ -1,0 +1,24 @@
+<form style="float:left" action="" onsubmit="$('my_frame').src='/frame?url='+encodeURIComponent($F($('url'))); return false;">
+	URL: <%=text_field_tag :url, "http://yellowpencil.com"%>
+	<%= submit_tag "Check Out" %>
+</form>
+
+<div style="margin-left:100px; float:left">
+	<div id="xpath">
+		Full CSS/XPath: 
+		<%=text_field_tag :xpath_selector, "", :size => 60%>
+		<%=button_to_function "Update Path", "xpath_changed($F($('xpath_selector'))); $('css_selector').value='';"%>
+	</div>
+	
+	<div id="css">
+		Cleaner CSS: 
+		<%=text_field_tag :css_selector, "", :size => 60%>
+		<%=button_to_function "Update CSS", "xpath_changed($F($('css_selector'))); $('xpath_selector').value='';"%>
+	</div>
+</div>
+
+<iframe id="my_frame" src="" style="width:100%; height:500px"></iframe>
+
+<script type="text/javascript" charset="utf-8">
+	$$("form")[0].onsubmit();
+</script>
