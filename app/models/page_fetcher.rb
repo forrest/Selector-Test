@@ -1,6 +1,5 @@
-require 'open-uri'
-
 class PageFetcher
+  require 'net/http'
   
   def self.fetch(url)
     @url_obj = Addressable::URI.parse(AbsoluteUrlGenerator.make_link_absolute(url))
