@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class PageFetcher
   
   def self.fetch(url)
